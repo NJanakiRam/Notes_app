@@ -1,0 +1,82 @@
+<!-- templates/register.html -->
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<div class="row justify-content-center align-items-center min-vh-100">
+  <div class="col-md-6 col-lg-4">
+    <div class="card shadow-lg border-0 p-4">
+      <div class="card-body">
+        <h2 class="mb-4 text-center"><i class="fa-solid fa-user-plus"></i> Create Your Account</h2>
+        <form method="POST" autocomplete="off">
+          {{ form.hidden_tag() }}
+          <div class="mb-3">
+            {{ form.username.label(class="form-label fw-semibold") }}
+            {{ form.username(class="form-control form-control-lg", placeholder="Enter username") }}
+            {% for error in form.username.errors %}
+              <div class="text-danger small">{{ error }}</div>
+            {% endfor %}
+          </div>
+          <div class="mb-3">
+            {{ form.password.label(class="form-label fw-semibold") }}
+            <div class="input-group">
+              {{ form.password(class="form-control form-control-lg", placeholder="Enter password", id="reg-password-field") }}
+              <button class="btn btn-outline-secondary d-flex align-items-center" type="button" id="toggle-reg-password" tabindex="-1" aria-label="Show/hide password">
+              </button>
+            </div>
+            <div class="form-text">Make it a good one!</div>
+            {% for error in form.password.errors %}
+              <div class="text-danger small">{{ error }}</div>
+            {% endfor %}
+          </div>
+          <div class="mb-3">
+            {{ form.confirm_password.label(class="form-label fw-semibold") }}
+            <div class="input-group">
+              {{ form.confirm_password(class="form-control form-control-lg", placeholder="Confirm password", id="reg-confirm-field") }}
+              <button class="btn btn-outline-secondary d-flex align-items-center" type="button" id="toggle-reg-confirm" tabindex="-1" aria-label="Show/hide confirm password">
+              </button>
+            </div>
+            <div class="form-text">Make it match the good one!</div>
+            {% for error in form.confirm_password.errors %}
+              <div class="text-danger small">{{ error }}</div>
+            {% endfor %}
+          </div>
+          <div class="d-grid mb-2">
+            {{ form.submit(class="btn btn-primary btn-lg") }}
+          </div>
+          <p class="mt-3 text-center">Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const regToggleBtn = document.getElementById('toggle-reg-password');
+const regPw = document.getElementById('reg-password-field');
+const regEyeIcon = document.getElementById('reg-eye-icon');
+regToggleBtn.onclick = function() {
+  if (regPw.type === 'password') {
+    regPw.type = 'text';
+    regEyeIcon.classList.remove('fa-eye');
+    regEyeIcon.classList.add('fa-eye-slash');
+  } else {
+    regPw.type = 'password';
+    regEyeIcon.classList.remove('fa-eye-slash');
+    regEyeIcon.classList.add('fa-eye');
+  }
+};
+const regConfirmToggleBtn = document.getElementById('toggle-reg-confirm');
+const regConfirmPw = document.getElementById('reg-confirm-field');
+const regConfirmEyeIcon = document.getElementById('reg-confirm-eye-icon');
+regConfirmToggleBtn.onclick = function() {
+  if (regConfirmPw.type === 'password') {
+    regConfirmPw.type = 'text';
+    regConfirmEyeIcon.classList.remove('fa-eye');
+    regConfirmEyeIcon.classList.add('fa-eye-slash');
+  } else {
+    regConfirmPw.type = 'password';
+    regConfirmEyeIcon.classList.remove('fa-eye-slash');
+    regConfirmEyeIcon.classList.add('fa-eye');
+  }
+};
+</script>
+{% endblock %}

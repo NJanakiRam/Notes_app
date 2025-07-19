@@ -1,0 +1,132 @@
+/* Enhanced dark mode and modern UI for all pages */
+body.night-mode {
+  background: #181a1b !important;
+  color: #e0e0e0 !important;
+}
+body.night-mode .navbar, body.night-mode .card-header {
+  background: #23272b !important;
+}
+body.night-mode .card {
+  background: #23272b !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #333 !important;
+}
+body.night-mode .form-control, body.night-mode .form-select {
+  background: #23272b !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
+}
+body.night-mode .form-control:focus {
+  background: #23272b !important;
+  color: #fff !important;
+  border-color: #6a11cb !important;
+  box-shadow: 0 0 0 0.2rem rgba(106,17,203,.25);
+}
+body.night-mode .btn-primary {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%) !important;
+  border: none !important;
+  color: #fff !important;
+}
+body.night-mode .btn-outline-primary {
+  color: #6a11cb !important;
+  border-color: #6a11cb !important;
+}
+body.night-mode .btn-outline-primary:hover {
+  background: #6a11cb !important;
+  color: #fff !important;
+}
+body.night-mode .btn-outline-light {
+  color: #e0e0e0 !important;
+  border-color: #e0e0e0 !important;
+}
+body.night-mode .alert {
+  background: #23272b !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
+}
+body.night-mode .hero {
+  background: linear-gradient(120deg, #23272b 0%, #181a1b 100%) !important;
+  color: #e0e0e0 !important;
+}
+body.night-mode .card-footer, body.night-mode .text-muted {
+  color: #b0b0b0 !important;
+}
+body.night-mode ::placeholder {
+  color: #b0b0b0 !important;
+  opacity: 1 !important;
+}
+body.night-mode .ql-toolbar.ql-snow {
+  background: #23272b !important;
+  border-color: #444 !important;
+}
+body.night-mode .ql-container.ql-snow {
+  background: #23272b !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
+}
+body.night-mode .ql-editor {
+  color: #e0e0e0 !important;
+}
+body.night-mode .ql-picker {
+  color: #e0e0e0 !important;
+}
+body.night-mode .ql-stroke {
+  stroke: #e0e0e0 !important;
+}
+body.night-mode .ql-fill {
+  fill: #e0e0e0 !important;
+}
+body.night-mode .ql-picker-options {
+  background: #23272b !important;
+  color: #e0e0e0 !important;
+}
+body.night-mode .ql-tooltip {
+  background: #23272b !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
+}
+/* Card and button enhancements for both modes */
+.card {
+  border-radius: 18px !important;
+  box-shadow: 0 4px 24px rgba(106,17,203,0.08), 0 1.5px 4px rgba(37,117,252,0.08);
+}
+.btn-primary {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  border: none;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+}
+.btn-outline-primary {
+  border-color: #6a11cb;
+  color: #6a11cb;
+}
+.btn-outline-primary:hover {
+  background: #6a11cb;
+  color: #fff;
+}
+.btn-outline-success {
+  border-color: #2575fc;
+  color: #2575fc;
+}
+.btn-outline-success:hover {
+  background: #2575fc;
+  color: #fff;
+}
+.btn-outline-secondary {
+  border-color: #b0b0b0;
+  color: #b0b0b0;
+}
+.btn-outline-secondary:hover {
+  background: #b0b0b0;
+  color: #23272b;
+}
+input[type="file"].form-control {
+  background: #f8f9fa;
+  color: #23272b;
+}
+body.night-mode input[type="file"].form-control {
+  background: #23272b;
+  color: #e0e0e0;
+}
